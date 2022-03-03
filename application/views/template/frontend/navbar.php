@@ -70,36 +70,9 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link <?= $this->uri->segment(1) == 'foundation' ? 'active' : ''; ?>">
-                                <div>Fondation</div>
+                            <a class="menu-link <?= $this->uri->segment(1) == 'union-care' ? 'active' : ''; ?>" href="<?= site_url('union-care'); ?>">
+                                <div>Union Care</div>
                             </a>
-                            <ul class="sub-menu-container">
-                                <li class="menu-item">
-                                    <a class="menu-link <?= $this->uri->segment(1) == 'needy-people' ? 'active' : ''; ?>" href="<?= site_url('foundation/needy-people'); ?>">
-                                        <div>Needy people</div>
-                                    </a>
-                                </li>
-                                <li class="menu-item">
-                                    <a class="menu-link <?= $this->uri->segment(1) == 'orphan' ? 'active' : ''; ?>" href="<?= site_url('foundation/orphan'); ?>">
-                                        <div>Orphan</div>
-                                    </a>
-                                </li>
-                                <li class="menu-item">
-                                    <a class="menu-link <?= $this->uri->segment(1) == 'health' ? 'active' : ''; ?>" href="<?= site_url('foundation/health'); ?>">
-                                        <div>Health</div>
-                                    </a>
-                                </li>
-                                <li class="menu-item">
-                                    <a class="menu-link <?= $this->uri->segment(1) == 'education' ? 'active' : ''; ?>" href="<?= site_url('foundation/education'); ?>">
-                                        <div>Education</div>
-                                    </a>
-                                </li>
-                                <li class="menu-item">
-                                    <a class="menu-link <?= $this->uri->segment(1) == 'clean-water' ? 'active' : ''; ?>" href="<?= site_url('foundation/clean-water'); ?>">
-                                        <div>Clean Water</div>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
 

@@ -5,11 +5,8 @@
 
 						<!-- Logo
 						============================================= -->
-						<div id="logo">
+						<div class="my-3 w-100">
 							<a href="<?= base_url(); ?>" class="standard-logo" data-dark-logo="<?= base_url(); ?>berkas/<?= $logo2; ?>" data-mobile-logo="<?= base_url(); ?>berkas/<?= $logo2; ?>">
-								<img src="<?= base_url(); ?>berkas/<?= $logo2; ?>" alt="<?= $web_title; ?>" style="height: 65px !important;">
-							</a>
-							<a href="<?= base_url(); ?>" class="retina-logo" data-dark-logo="<?= base_url(); ?>berkas/<?= $logo2; ?>" data-mobile-logo="<?= base_url(); ?>berkas/<?= $logo2; ?>">
 								<img src="<?= base_url(); ?>berkas/<?= $logo2; ?>" alt="<?= $web_title; ?>" style="height: 65px !important;">
 							</a>
 						</div><!-- #logo end -->
@@ -65,23 +62,6 @@
 									<a class="menu-link" href="<?= site_url('dashboard/manage-collection'); ?>">
 										<div>Collection</div>
 									</a>
-								</li>
-								<li class="menu-item" id="tour-foundation">
-									<a class="menu-link">
-										<div>Foundation</div>
-									</a>
-									<ul class="sub-menu-container">
-										<li class="menu-item">
-											<a class="menu-link" href="<?= site_url('dashboard/list-foundation'); ?>">
-												<div>List foundation</div>
-											</a>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="<?= site_url('dashboard/add-new-fundation'); ?>">
-												<div>Add new</div>
-											</a>
-										</li>
-									</ul>
 								</li>
 								<li class="menu-item">
 									<a class="menu-link" href="<?= site_url('logout'); ?>">

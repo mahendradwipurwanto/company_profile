@@ -11,7 +11,7 @@
 <div class="row">
     <div class="col-12">
         <div class="alert alert-info">
-            <i class="icon-info"></i><strong>Development version!</strong> This is a development version, after release. We include thrice improvement features with a month of support.
+            <i class="icon-info"></i><strong>Development version!</strong> This is a development version.
         </div>
     </div>
 </div>

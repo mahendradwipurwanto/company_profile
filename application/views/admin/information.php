@@ -9,7 +9,7 @@
     <div class="col-12">
         <div class="alert alert-info">
             <i class="icon-info"></i><strong>Information</strong> You can manage your website information in here, from
-            adding hero to adding social media and others stuff.
+            adding hero to change union care content and others stuff.
         </div>
     </div>
 </div>
@@ -20,7 +20,8 @@
 
             <ul class="tab-nav clearfix">
                 <li><a href="#tabs-1">Website information</a></li>
-                <li><a href="#tabs-3">Content Categories</a></li>
+                <li><a href="#tabs-2">Gallery Categories</a></li>
+                <li><a href="#tabs-3">Union Care Content</a></li>
             </ul>
 
             <div class="tab-container">
@@ -59,7 +60,7 @@
                                             <label for="inputEmail">Contact Email</label>
                                             <input type="text" class="form-control" id="inputEmail" name="email" value="<?= $w_email; ?>" required>
                                         </div>
-                                        <button type="submit" class="button button-border button-rounded button-fill button-aqua mt-3 float-right" id="send-button"><span><i class="icon-save"></i> Save
+                                        <button type="submit" class="button button-border button-rounded button-fill button-aqua mt-3 float-right send-button" id="send-button"><span><i class="icon-save"></i> Save
                                                 Information</span></button>
                                     </form>
                                 </div>
@@ -86,13 +87,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-content clearfix" id="tabs-3">
+                <div class="tab-content clearfix" id="tabs-2">
                     <div class="row">
                         <div class="col-md-12">
 
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-header-title mb-4">Categories
+                                    <h4 class="card-header-title mb-4">Gallery Categories
                                         <button type="button" class="button button-mini mt-0 button-circle button-border float-right button-aqua" data-toggle="modal" data-target="#add_categories"><i class="icon-plus"></i>Add
                                             categories</button>
                                     </h4>
@@ -104,7 +105,6 @@
                                                         <th class="text-center" width="8%">No</th>
                                                         <th width="18%"></th>
                                                         <th>Categories</th>
-                                                        <th>Type</th>
                                                         <th class="text-center" width="10%">Description</th>
                                                     </tr>
                                                 </thead>
@@ -119,13 +119,6 @@
                                                                     <button class="button button-mini m-0 text-center button-red" data-toggle="modal" data-target="#delete_categories-<?= $key->id; ?>"><i class="icon-trash m-0"></i></button>
                                                                 </td>
                                                                 <td><?= $key->categories; ?></td>
-                                                                <td>
-                                                                    <?php if ($key->type == 1) : ?>
-                                                                        <span class="button button-mini button-amber">Gallery</span>
-                                                                    <?php else : ?>
-                                                                        <span class="button button-mini button-teal">foundation</span>
-                                                                    <?php endif; ?>
-                                                                </td>
                                                                 <td class="text-center">
                                                                     <?php if (isset($key->description)) : ?>
                                                                         <button class="button button-mini m-0 button-dirtygreen" data-toggle="modal" data-target="#desc_categories-<?= $key->id; ?>"><i class="icon-clipboard"></i> read</button>
@@ -152,21 +145,12 @@
                                                                                     <input type="text" class="form-control" id="featuredTitle" name="categories" value="<?= $key->categories; ?>" required>
                                                                                 </div>
                                                                                 <div class="mb-2">
-                                                                                    <label for="featuredDescription">Type <small class="text-danger">*</small></label>
-                                                                                    <div>
-                                                                                        <input id="radio-4-<?= $key->id; ?>" class="radio-style" name="type" value="1" type="radio" <?= $key->type == 1 ? 'checked' : ''; ?>>
-                                                                                        <label for="radio-4-<?= $key->id; ?>" class="radio-style-1-label">Gallery</label>
-                                                                                        <input id="radio-5-<?= $key->id; ?>" class="radio-style" name="type" value="2" type="radio" <?= $key->type == 2 ? 'checked' : ''; ?>>
-                                                                                        <label for="radio-5-<?= $key->id; ?>" class="radio-style-1-label">Foundation</label>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="mb-2">
                                                                                     <label for="featuredDescription">Description
                                                                                         <small class="text-muted">(optional)</small></label>
                                                                                     <textarea class="form-control" name="description" maxlength="200" rows="3"><?= $key->description; ?></textarea>
                                                                                 </div>
                                                                                 <div class="modal-footer px-0">
-                                                                                    <button type="submit" class="button button-border mb-0 button-rounded button-fill button-aqua mt-3 float-right" id="send-button"><span>Edit
+                                                                                    <button type="submit" class="button button-border mb-0 button-rounded button-fill button-aqua mt-3 float-right send-button" id="send-button"><span>Edit
                                                                                             categories</span></button>
                                                                                 </div>
                                                                             </form>
@@ -188,7 +172,7 @@
                                                                             <p>Dou you really want to delete categories:
                                                                                 <?= $key->categories; ?>?</p>
                                                                             <div class="modal-footer px-0">
-                                                                                <a href="<?= site_url('admin/delete_categories/' . $key->id); ?>" class="button button-border button-rounded button-fill button-red mt-3 mb-0 float-right" id="send-button"><span>Delete
+                                                                                <a href="<?= site_url('admin/delete_categories/' . $key->id); ?>" class="button button-border button-rounded button-fill button-red mt-3 mb-0 float-right send-button" id="send-button"><span>Delete
                                                                                         categories</span></a>
                                                                             </div>
                                                                         </div>
@@ -217,6 +201,24 @@
                                             </table>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content clearfix" id="tabs-3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="<?= site_url('admin/change_unionCare'); ?>" method="post">
+                                        <h4 class="card-header-title mb-4">Union care content</h4>
+                                        <div class="mb-2">
+                                            <textarea type="text" class="form-control" id="inputUnionCare" name="union_care" rows="6" required><?= $w_unionCare; ?></textarea>
+                                        </div>
+                                        <button type="submit" class="button button-border button-rounded button-fill button-aqua mt-3 float-right send-button" id="send-button"><span><i class="icon-save"></i> Save</span></button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -258,7 +260,7 @@
                         <textarea class="form-control" id="heroDescription" name="hero_description" maxlength="300" rows="3"><?= $hero->value; ?></textarea>
                     </div>
                     <div class="modal-footer px-0">
-                        <button type="submit" class="button button-border button-rounded button-fill button-aqua mt-3 float-right" id="send-button"><span>Update hero</span></button>
+                        <button type="submit" class="button button-border button-rounded button-fill button-aqua mt-3 float-right send-button" id="send-button"><span>Update hero</span></button>
                     </div>
                 </form>
             </div>
@@ -279,7 +281,7 @@
                     <label for="inputAbout">About your website</label>
                     <textarea name="about" class="form-control" id="inputAbout" rows="3"><?= $w_about; ?></textarea>
                     <div class="modal-footer px-0">
-                        <button type="submit" class="button button-border button-rounded button-fill button-aqua mt-3 float-right" id="send-button"><span>Update about</span></button>
+                        <button type="submit" class="button button-border button-rounded button-fill button-aqua mt-3 float-right send-button" id="send-button"><span>Update about</span></button>
                     </div>
                 </form>
             </div>
@@ -359,7 +361,7 @@
                     </div>
                     <div class="modal-footer px-0">
                         <a href="<?= site_url('admin/change_featuredHide'); ?>" class="button button-border button-rounded button-fill button-dark mt-3 float-right" data-dismiss="modal"><span>Hide</span></a>
-                        <button type="submit" class="button button-border button-rounded button-fill button-aqua mt-3 float-right" id="send-button"><span>Update featured content</span></button>
+                        <button type="submit" class="button button-border button-rounded button-fill button-aqua mt-3 float-right send-button" id="send-button"><span>Update featured content</span></button>
                     </div>
                 </form>
             </div>
@@ -372,7 +374,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="hero_section">Add new categories</h5>
+                <h5 class="modal-title" id="hero_section">Add new gallery categories</h5>
                 <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -382,20 +384,11 @@
                         <input type="text" class="form-control" id="featuredTitle" name="categories" placeholder="Insert categories title" required>
                     </div>
                     <div class="mb-2">
-                        <label for="featuredDescription">Type <small class="text-danger">*</small></label>
-                        <div>
-                            <input id="radio-6" class="radio-style" name="type" value="1" type="radio" checked>
-                            <label for="radio-6" class="radio-style-1-label">Gallery</label>
-                            <input id="radio-7" class="radio-style" name="type" value="2" type="radio">
-                            <label for="radio-7" class="radio-style-1-label">Foundation</label>
-                        </div>
-                    </div>
-                    <div class="mb-2">
                         <label for="featuredDescription">Description <small class="text-muted">(optional)</small></label>
                         <textarea class="form-control" name="description" maxlength="200" rows="3" placeholder="Insert categories description"></textarea>
                     </div>
                     <div class="modal-footer px-0">
-                        <button type="submit" class="button button-border button-rounded button-fill mb-0 button-aqua mt-3 float-right" id="send-button"><span>Add new categories</span></button>
+                        <button type="submit" class="button button-border button-rounded button-fill mb-0 button-aqua mt-3 float-right send-button" id="send-button"><span>Add new categories</span></button>
                     </div>
                 </form>
             </div>
@@ -405,63 +398,49 @@
 
 <script type="text/javascript">
     $('form').submit(function(event) {
-        $('#send-button').prop("disabled", true);
+        $('.send-button').prop("disabled", true);
         // add spinner to button
-        $('#send-button').html(
+        $('.send-button').html(
             `<span>Loading...</span>`
         );
         return;
     });
 
-    ClassicEditor
-        .create(document.querySelector('#inputAbout'), {
-            toolbar: ['heading', '|',
-                'fontfamily', 'fontsize', '|',
-                'alignment', '|',
-                'fontColor', 'fontBackgroundColor', '|',
-                'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
-                'link', '|',
-                'outdent', 'indent', '|',
-                'bulletedList', 'numberedList', 'todoList', '|',
-                'code', 'codeBlock', '|',
-                'insertTable', 'blockQuote', '|',
-                'undo', 'redo'
-            ],
-            shouldNotGroupWhenFull: true
-        })
-        .catch(error => {
-            console.log(error);
-        });
+    // TINYMCE
+    tinymce.init({
+        selector: '#inputAbout,#heroDescription,#featuredDescription',
+        height: 400,
+        menubar: false,
+        branding: false,
+        toolbar_sticky: true,
+        plugins: [
+            'lists preview',
+            'visualblocks'
+        ],
+        toolbar: 'undo redo | fontsizeselect formatselect | forecolor' +
+            'blockquote bold italic underline | alignleft aligncenter ' +
+            'alignright alignjustify | bullist numlist outdent indent'
+    });
 
-    ClassicEditor
-        .create(document.querySelector('#heroDescription'), {
-            toolbar: ['heading', '|',
-                'fontfamily', 'fontsize', '|',
-                'alignment', '|',
-                'fontColor', 'fontBackgroundColor', '|',
-                'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
-                'undo', 'redo'
-            ],
-            shouldNotGroupWhenFull: true
-        })
-        .catch(error => {
-            console.log(error);
-        });
-
-    ClassicEditor
-        .create(document.querySelector('#featuredDescription'), {
-            toolbar: ['heading', '|',
-                'fontfamily', 'fontsize', '|',
-                'alignment', '|',
-                'fontColor', 'fontBackgroundColor', '|',
-                'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
-                'undo', 'redo'
-            ],
-            shouldNotGroupWhenFull: true
-        })
-        .catch(error => {
-            console.log(error);
-        });
+    // TINYMCE
+    tinymce.init({
+        selector: '#inputUnionCare',
+        height: 600,
+        menubar: false,
+        branding: false,
+        toolbar_sticky: true,
+        plugins: 'print preview paste importcss searchreplace autolink autosave save directionality  visualblocks visualchars fullscreen image link media codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap emoticons lineheight',
+        // plugins: [
+        //     'lists preview',
+        //     'visualblocks',
+        //     'table paste wordcount emoticons'
+        // ],
+        toolbar: 'fullscreen  preview | undo redo | fontselect fontsizeselect formatselect lineheight | charmap emoticons | blockquote bold italic underline strikethrough |  alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | image media template link codesample',
+        // toolbar: 'undo redo | fontsizeselect formatselect | forecolor backcolor removeformat | emoticons' +
+        //     'blockquote bold italic underline strikethrough | alignleft aligncenter ' +
+        //     'alignright alignjustify | bullist numlist outdent indent | ' +
+        //     'removeformat preview'
+    });
 
     function previewL_LOGO_BLACK(input) {
         $(".L_LOGO_BLACK").removeClass('hidden');

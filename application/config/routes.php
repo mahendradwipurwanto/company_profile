@@ -73,7 +73,7 @@ $route['about'] = 'home/about';
 $route['gallery'] = 'home/gallery';
 $route['gallery/(:any)'] = 'home/gallery_detail/$1';
 $route['new-collection'] = 'home/new_collection';
-$route['foundation/(:any)'] = 'home/foundation/$1';
+$route['union-care'] = 'home/union_care';
 $route['search'] = 'home/search';
 
 $route['default_controller'] = 'home';

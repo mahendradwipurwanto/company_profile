@@ -56,9 +56,6 @@
 			}, {
 				element: document.querySelector('#tour-collection'),
 				intro: "You can see your collection from opensea account in this page"
-			}, {
-				element: document.querySelector('#tour-foundation'),
-				intro: "You can manage information about foundation in this page"
 			}]
 		}).start();
 	};

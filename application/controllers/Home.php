@@ -70,9 +70,11 @@ class Home extends CI_Controller
 		$this->template_frontend->view('beranda/new_collection', $data);
 	}
 
-	public function foundation($categories)
+	public function union_care()
 	{
-		$this->template_frontend->view('beranda/foundation');
+		$data['w_unionCare'] = $this->M_admin->get_websiteInfo("union_care");
+
+		$this->template_frontend->view('beranda/union_care', $data);
 	}
 
 	public function item_detail($slug)

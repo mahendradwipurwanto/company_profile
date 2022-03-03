@@ -58,7 +58,12 @@
 	============================================= -->
 	<script src="<?= base_url(); ?>assets/js/jquery.js"></script>
 	<script src="https://kit.fontawesome.com/8bf0a8f6ea.js" crossorigin="anonymous"></script>
+	
 	<script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
+
+	<script type="text/javascript" src="<?= base_url(); ?>assets/plugin/tinymce/jquery.tinymce.min.js"></script>
+	<script type="text/javascript" src="<?= base_url(); ?>assets/plugin/tinymce/tinymce.min.js"></script>
+	<script type="text/javascript" src="<?= base_url(); ?>assets/plugin/tinymce-textarea.js"></script>
 	<!-- Plugins js -->
 	<script src="<?= base_url(); ?>assets/dropzone/min/dropzone.min.js"></script>
 

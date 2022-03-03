@@ -69,7 +69,7 @@
     <div class="content-wrap">
 
         <?php if (!empty($featured_hero)) : ?>
-            <div class="promo promo-full promo-border p-5 header-stick bottommargin-lg">
+            <div class="promo promo-full p-5 header-stick bottommargin-lg">
                 <div class="container text-center">
                     <div class="row align-items-center">
                         <div class="col-12 col-lg">
@@ -81,7 +81,7 @@
             </div>
         <?php endif; ?>
 
-        <?php if (!empty($featured_list)) : ?>
+        <!-- <?php if (!empty($featured_list)) : ?>
             <div class="container clearfix">
 
                 <div class="row col-mb-50">
@@ -101,9 +101,9 @@
                 </div>
 
             </div>
-        <?php endif; ?>
-        <div class="clear"></div>
-        <div class="line"></div>
+        <?php endif; ?> -->
+        <!-- <div class="clear"></div>
+        <div class="line"></div> -->
 
         <div class="section mt-0 border-top-0">
             <div class="container center clearfix">

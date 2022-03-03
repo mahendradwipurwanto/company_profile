@@ -45,6 +45,8 @@ class Admin extends CI_Controller
 
         $data['w_about'] = $this->M_admin->get_websiteInfo("about");
 
+        $data['w_unionCare'] = $this->M_admin->get_websiteInfo("union_care");
+
         $data['w_logo'] = $this->M_admin->get_websiteInfo("logo");
         $data['w_logo2'] = $this->M_admin->get_websiteInfo("logo2");
 
@@ -134,6 +136,17 @@ class Admin extends CI_Controller
             redirect(site_url('dashboard/information'));
         } else {
             $this->session->set_flashdata('error', 'There is a problem when change your featured content !');
+            redirect($this->agent->referrer());
+        }
+    }
+
+    public function change_unionCare()
+    {
+        if ($this->M_admin->change_unionCare() == true) {
+            $this->session->set_flashdata('success', 'Successfully change union care page content !');
+            redirect(site_url('dashboard/information#tabs-3'));
+        } else {
+            $this->session->set_flashdata('error', 'There is a problem when change union care page content !');
             redirect($this->agent->referrer());
         }
     }
@@ -318,7 +331,7 @@ class Admin extends CI_Controller
     {
         if ($this->M_admin->add_newCategories() == true) {
             $this->session->set_flashdata('success', 'Successfully add new categories !');
-            redirect($this->agent->referrer());
+            redirect(site_url('dashboard/information#tabs-2'));
         } else {
             $this->session->set_flashdata('error', 'There is a problem when adding new categories !');
             redirect($this->agent->referrer());
@@ -330,7 +343,7 @@ class Admin extends CI_Controller
     {
         if ($this->M_admin->edit_categories() == true) {
             $this->session->set_flashdata('success', 'Successfully edit categories !');
-            redirect($this->agent->referrer());
+            redirect(site_url('dashboard/information#tabs-2'));
         } else {
             $this->session->set_flashdata('error', 'There is a problem when trying to edit categories !');
             redirect($this->agent->referrer());
@@ -342,7 +355,7 @@ class Admin extends CI_Controller
     {
         if ($this->M_admin->delete_categories($id) == true) {
             $this->session->set_flashdata('success', 'Successfully delete categories !');
-            redirect($this->agent->referrer());
+            redirect(site_url('dashboard/information#tabs-2'));
         } else {
             $this->session->set_flashdata('error', 'There is a problem when delete categories !');
             redirect($this->agent->referrer());

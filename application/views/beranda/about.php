@@ -20,9 +20,9 @@
 			<div class="content-wrap">
 				<div class="container clearfix">
 
-					<div class="row col-mb-80 mb-0">
+					<div class="row mb-0">
 
-						<div class="col-12 pb-5">
+						<div class="col-12">
 
 							<div class="heading-block center border-bottom-0">
 								<h2><?= $web_title; ?></h2>
@@ -34,7 +34,7 @@
 					</div>
 				</div>
 			</div>
-			<?php if (!empty($featured_about)) : ?>
+			<!-- <?php if (!empty($featured_about)) : ?>
 				<div class="container clearfix">
 
 					<div class="row col-mb-50 mb-0">
@@ -54,6 +54,6 @@
 					</div>
 
 				</div>
-			<?php endif; ?>
+			<?php endif; ?> -->
 			<br><br><br>
 		</section><!-- #content end -->

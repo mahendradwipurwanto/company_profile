@@ -256,6 +256,35 @@ class M_admin extends CI_Model
         return true;
     }
 
+    public function change_unionCare()
+    {
+
+        $cek = $this->db->get_where('tb_information', ['name' => 'union_care'])->num_rows();
+
+        $union_care   = $this->input->post('union_care');
+
+        if ($cek > 0) {
+
+            $data = [
+                'value' => $union_care
+            ];
+
+            $this->db->where('name', 'union_care');
+            $this->db->update('tb_information', $data);
+        } else {
+
+            $data = [
+                'id_type' => 16,
+                'name' => 'union_care',
+                'value' => $union_care
+            ];
+
+            $this->db->insert('tb_information', $data);
+        }
+
+        return true;
+    }
+
     public function procces_addNewGallery()
     {
 
@@ -330,12 +359,11 @@ class M_admin extends CI_Model
     {
 
         $categories   = $this->input->post('categories');
-        $type   = $this->input->post('type');
         $description   = $this->input->post('description');
 
         $data = [
             'categories' => $categories,
-            'type' => $type,
+            'type' => 1,
             'description' => $description
         ];
 
@@ -353,7 +381,6 @@ class M_admin extends CI_Model
 
         $data = [
             'categories' => $categories,
-            'type' => $type,
             'description' => $description
         ];
 
