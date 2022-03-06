@@ -47,7 +47,7 @@
         									<strong>Address:</strong><br>
         									<?= $web_address; ?><br>
         								</address>
-        								<abbr title="Phone Number"><strong>Phone:</strong></abbr> <?= $web_phone; ?><br>
+        								<!-- <abbr title="Phone Number"><strong>Phone:</strong></abbr> <?= $web_phone; ?><br> -->
         								<abbr title="Email Address"><strong>Email:</strong></abbr> <?= $web_mail; ?>
         							</div>
         						</div>
