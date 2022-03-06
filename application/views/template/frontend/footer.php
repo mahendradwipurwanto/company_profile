@@ -48,7 +48,7 @@
         									<?= $web_address; ?><br>
         								</address>
         								<!-- <abbr title="Phone Number"><strong>Phone:</strong></abbr> <?= $web_phone; ?><br> -->
-        								<abbr title="Email Address"><strong>Email:</strong></abbr> <?= $web_mail; ?>
+        								<abbr title="Email Address"><strong>Email:</strong></abbr> <a href="mailto:<?= $web_mail; ?>"><?= $web_mail; ?></a>
         							</div>
         						</div>
         					</div>
@@ -75,7 +75,8 @@
 
         					<div class="clear"></div>
 
-        					<i class="icon-envelope2 mr-1"></i> <?= $web_mail; ?> <span class="middot">&middot;</span> <i class="icon-phone mr-1"></i> <?= $web_phone; ?>
+        					<i class="icon-envelope2 mr-1"></i> <a href="mailto:<?= $web_mail; ?>"><?= $web_mail; ?></a>
+        					<!-- <span class="middot">&middot;</span> <i class="icon-phone mr-1"></i> <?= $web_phone; ?> -->
         				</div>
 
         			</div>
