@@ -63,7 +63,7 @@
                                 </select>
                             </div>
                             <div class="col-1 px-0">
-                                <a href="<?= site_url('dashboard/information'); ?>" class="btn btn-info btn-block"><i class="fa fa-plus"></i></a>
+                                <a href="<?= site_url('dashboard/information#gallery-categories'); ?>" class="btn btn-info btn-block"><i class="fa fa-plus"></i></a>
                             </div>
                         </div>
                     </div>

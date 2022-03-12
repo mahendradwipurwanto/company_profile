@@ -19,14 +19,14 @@
         <div class="tabs tabs-alt tabs-tb clearfix" id="tab-8">
 
             <ul class="tab-nav clearfix">
-                <li><a href="#tabs-1">Website information</a></li>
-                <li><a href="#tabs-2">Gallery Categories</a></li>
-                <li><a href="#tabs-3">Union Care Content</a></li>
+                <li><a href="#website-information">Website information</a></li>
+                <li><a href="#gallery-categories">Gallery Categories</a></li>
+                <li><a href="#unisons-care">Unisons Care Content</a></li>
             </ul>
 
             <div class="tab-container">
 
-                <div class="tab-content clearfix" id="tabs-1">
+                <div class="tab-content clearfix" id="website-information">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card">
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-content clearfix" id="tabs-2">
+                <div class="tab-content clearfix" id="gallery-categories">
                     <div class="row">
                         <div class="col-md-12">
 
@@ -207,7 +207,7 @@
                     </div>
                 </div>
 
-                <div class="tab-content clearfix" id="tabs-3">
+                <div class="tab-content clearfix" id="unisons-care">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card">

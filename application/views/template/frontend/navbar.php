@@ -70,8 +70,8 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link <?= $this->uri->segment(1) == 'union-care' ? 'active' : ''; ?>" href="<?= site_url('union-care'); ?>">
-                                <div>Union Care</div>
+                            <a class="menu-link <?= $this->uri->segment(1) == 'unisons-care' ? 'active' : ''; ?>" href="<?= site_url('unisons-care'); ?>">
+                                <div>Unisons Care</div>
                             </a>
                         </li>
                     </ul>
